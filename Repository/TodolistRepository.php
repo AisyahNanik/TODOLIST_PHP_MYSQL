@@ -27,7 +27,7 @@ namespace Repository {
             $statement = $this->connection->prepare($sql);
             $statement->execute([$number]);
 
-            if ($tatement->fetch()) {
+            if ($statement->fetch()) {
                 //todolist ada
                 $sql = "DELETE FROM todolist WHERE id = ?";
                 $statement = $this->connection->prepare($sql);
@@ -39,7 +39,7 @@ namespace Repository {
             }
         }
 
-        function findAlll(): array {
+        function findAll(): array {
             $sql = "SELECT id, todo FROM todolist";
             $statement = $this->connection->prepare($sql);
             $statement->execute();

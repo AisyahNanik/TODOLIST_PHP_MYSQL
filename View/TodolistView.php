@@ -2,9 +2,9 @@
 
 namespace View {
     use Service\TodolistService;
-    use Helper\InpuHelper;
+    use Helper\InputHelper;
 
-    class Todolistview {
+    class TodolistView {
         private TodolistService $todolistService;
 
         public function __construct(TodolistService $todolistService) {
